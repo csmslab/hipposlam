@@ -54,7 +54,7 @@ for i in range(n_mats):
     grids[:,:,i,0], grids[:,:,i,1] = vco.theta_to_hcn(VCOmat, w_grid[:,:,i], arena)
 
 # %% ###########################################################################
-# Developing gridness score function --93
+# Developing gridness score function
 # ##############################################################################
 def gridness_score(cell_activity,dAng=6,verbose=False):
     autocorr = correlate2d(cell_activity,cell_activity)
