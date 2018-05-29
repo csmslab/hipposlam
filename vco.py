@@ -185,7 +185,36 @@ def plot_cells(data, numcells, size=(10,10)):
 
     plt.tight_layout()
 
+def plot_many(things_to_plot,size):
+    number = things_to_plot.shape[2]
+    n_rc = int(np.ceil(np.sqrt(number)))
+    n_plots = n_rc**2
+    if n_plots > number:
+        n_plots = number
+    
+    fig, axes = plt.subplots(nrows=n_rc, ncols=n_rc, sharex=True, sharey=True, figsize=(10,10))
+    axes_list = [item for sublist in axes for item in sublist]
 
+    for idx in range(n_plots):
+        ax = axes_list.pop(0)
+        ax.imshow(things_to_plot[:,:,idx],cmap='jet',extent=(-size,size,-size,size))
+        ax.set_title(idx)
+        ax.tick_params(
+            which='both',
+            bottom='off',
+            left='off',
+            right='off',
+            top='off'
+        )
+        ax.spines['left'].set_visible(False)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.spines['bottom'].set_visible(False)
+
+    for ax in axes_list:
+        ax.remove()
+
+    plt.tight_layout()
 
 # ##############################################################################
 # Matrix Helper Functions
