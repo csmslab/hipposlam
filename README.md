@@ -7,6 +7,7 @@ View/run the notebooks here:
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/acellon/hipposlam/master?filepath=biocas_notebook.ipynb)
 
 This repo includes:
+
  File | Description
 ----|---------
 `vco.py` | a Python library defining model classes and helpful functions for computation and plotting.
@@ -16,6 +17,7 @@ This repo includes:
 `scores.ipynb` | Jupyter notebook developing/discussing various scoring concepts for navigational cells.
 
 Still under construction:
+
 File | Description
 ---|---
 `hc_nav.ipynb` | a Jupyter notebook demonstrating [Welday _et al._, 2011](http://www.jneurosci.org/content/31/45/16157.long).
