@@ -263,3 +263,14 @@ def matrix_sum(matrix, weights, size):
     norm_env = thresh_env / max_env
     return norm_env, env_sum
 
+def matrix_sum_rw(matrix, weights, rand_walk):
+    # Find sum of responses from all cells in weights matrix
+    env_sum = np.zeros(rand_walk.shape[0],dtype='complex128')
+    for i in range(weights.shape[0]):
+        for j in range(weights.shape[1]):
+            if not np.isnan(weights[i,j]):
+                cell_env = matrix[i][j].get_envelope(int(weights[i,j]), 
+                                                     rand_walk[:,0], -rand_walk[:,1])
+                env_sum = env_sum + cell_env
+
+    return env_sum
