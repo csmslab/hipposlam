@@ -1,27 +1,30 @@
 # HippoSLAM
-a Simultaneous Localization And Mapping algorithm based on mammal (particularly
-rodent) _hippocampal_ navigation paradigms.
+a Simultaneous Localization And Mapping algorithm based on mammal (rodent) __hippocampal__ navigation paradigms.
 
 ---
-##  View/run the notebooks here: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/acellon/hipposlam/master)
-
+## View/run the notebooks here: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/acellon/hipposlam/master)
 ---
 
 ### This repo includes:
 
- File | Description
----|---
-`vco.py` | Python library defining model classes and helpful functions for computation and plotting.
-`vco_demo.ipynb` | Jupyter notebook demonstrating `vco.py`.
-`biocas_nb.ipynb` | Jupyter notebook describing important math and simulation details for our BioCAS 2018 paper.
-`welday.ipynb` | Jupyter notebook demonstrating [Welday _et al._, 2011](http://www.jneurosci.org/content/31/45/16157.long).
-`de_almeida.ipynb` | Jupyter notebook demonstrating [de Almeida _et al._, 2009](http://www.jneurosci.org/content/29/23/7504.long).
-`scoring.ipynb` | Jupyter notebook developing/discussing various scoring concepts for navigational cells.
-`pc_gc_experiments.ipynb` | Jupyter notebook comparing PCs from VCOs and from GCs, showing how to translate GCs, etc.
+| File                      | Description                                                     |
+|:--------------------------|:----------------------------------------------------------------|
+| `vco.py`                  | defines model classes and functions for computation/plotting.   |
+| `vco_demo.ipynb`          | demonstrates `vco.py`.                                          |
+| `biocas_nb.ipynb`         | describes important math and simulations for BioCAS 2018 paper. |
+| `welday.ipynb`            | demonstrates [Welday _et al._, 2011][welday].                   |
+| `de_almeida.ipynb`        | demonstrates [de Almeida _et al._, 2009][de almeida].           |
+| `scoring.ipynb`           | explores scoring concepts for navigational cells.               |
+| `pc_gc_experiments.ipynb` | compares PCs from VCOs and from GCs, shows GC translation, etc. |
 
 
 ### Still under construction:
 
-File | Description
----|---
-`solstad.ipynb` | Jupyter notebook demonstrating [Solstad _et al._, 2006](https://www.ncbi.nlm.nih.gov/pubmed/17094145).
+| File            | Description                                     |
+|:----------------|:------------------------------------------------|
+| `solstad.ipynb` | demonstrates [Solstad _et al._, 2006][solstad]. |
+
+
+[welday]: http://www.jneurosci.org/content/31/45/16157.long
+[de almeida]: http://www.jneurosci.org/content/29/23/7504.long
+[solstad]: https://www.ncbi.nlm.nih.gov/pubmed/17094145
