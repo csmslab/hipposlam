@@ -7,15 +7,15 @@ a Simultaneous Localization And Mapping algorithm based on mammal (rodent) __hip
 
 ### This repo includes:
 
-| File                      | Description                                                     |
-|:--------------------------|:----------------------------------------------------------------|
-| `vco.py`                  | defines model classes and functions for computation/plotting.   |
-| `vco_demo.ipynb`          | demonstrates `vco.py`.                                          |
-| `biocas_nb.ipynb`         | describes important math and simulations for BioCAS 2018 paper. |
-| `welday.ipynb`            | demonstrates [Welday _et al._, 2011][welday].                   |
-| `de_almeida.ipynb`        | demonstrates [de Almeida _et al._, 2009][de almeida].           |
-| `scoring.ipynb`           | explores scoring concepts for navigational cells.               |
-| `pc_gc_experiments.ipynb` | compares PCs from VCOs and from GCs, shows GC translation, etc. |
+| File                      | Description                                                                 |
+|:--------------------------|:----------------------------------------------------------------------------|
+| `vco.py`                  | defines model classes and functions for computation/plotting.               |
+| `vco_demo.ipynb`          | demonstrates `vco.py`.                                                      |
+| `vco_walkthrough.ipynb`   | describes important math and simulations for implementing VCOs in hardware. |
+| `welday.ipynb`            | demonstrates [Welday _et al._, 2011][welday].                               |
+| `de_almeida.ipynb`        | demonstrates [de Almeida _et al._, 2009][de almeida].                       |
+| `scoring.ipynb`           | explores scoring concepts for navigational cells.                           |
+| `pc_gc_experiments.ipynb` | compares PCs from VCOs and from GCs, shows GC translation, etc.             |
 
 
 ### Still under construction:

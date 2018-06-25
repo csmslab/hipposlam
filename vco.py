@@ -30,7 +30,7 @@ class VCO_model:
         '''
         Sets jitter between VCO cell preferred directions using
         uniform noise.
-                      
+
         Returns
         -------
         cellphz: ndarray (N,) dtype=float
@@ -56,7 +56,7 @@ class VCO_model:
         '''
         Sets jitter between VCO cell preferred directions using
         Gaussian noise.
-                      
+
         Returns
         -------
         cellphz: ndarray (N,) dtype=float
@@ -84,23 +84,23 @@ class VCO_model:
         '''
         Returns spatial envelope function, analogous to firing map.
         Implements Welday et al. (2011) equation 20.
-        
+
         Parameters
         ----------
         cell : int
             Index of VCO cell.
-            
+
         x : ndarray * dtype=float
             Array of location x values.
-                
+
         y : ndarray * dtype=float
             Array of location y values.
-              
+
         Returns
         -------
         E : ndarray * dtype=float
             Envelope function determining spatially-tuned VCO activity.
-            
+
         Notes
         _____
         * Shape of x, y, and E arrays can be either 1-D (illustrating an
@@ -115,18 +115,18 @@ class VCO_model:
         '''
         Returns instantaneous angular frequency omega for specified cell in VCO.
         Implements Welday et al. (2011) equation 11.
-        
+
         Parameters
         ----------
         cell : int
             Index of VCO cell.
-            
+
         pol_vel : ndarray (_, 2) dtype=float
             Allocentric polar velocity vector
-        
+
         base_freq : float
             Shared angular base frequency of all VCOs.
-        
+
         Returns
         -------
         omega : ndarray (len(pol_vel),) dtype=float
@@ -213,7 +213,7 @@ def plot_many(things_to_plot,size):
     n_plots = n_rc**2
     if n_plots > number:
         n_plots = number
-    
+
     fig, axes = plt.subplots(nrows=n_rc, ncols=n_rc, sharex=True, sharey=True, figsize=(10,10))
     axes_list = [item for sublist in axes for item in sublist]
 
@@ -269,7 +269,7 @@ def matrix_sum_rw(matrix, weights, rand_walk):
     for i in range(weights.shape[0]):
         for j in range(weights.shape[1]):
             if not np.isnan(weights[i,j]):
-                cell_env = matrix[i][j].get_envelope(int(weights[i,j]), 
+                cell_env = matrix[i][j].get_envelope(int(weights[i,j]),
                                                      rand_walk[:,0], -rand_walk[:,1])
                 env_sum = env_sum + cell_env
 
