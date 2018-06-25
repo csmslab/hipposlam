@@ -1,9 +1,12 @@
 # HippoSLAM
-a Simultaneous Localization And Mapping algorithm based on mammal (rodent) __hippocampal__ navigation paradigms.
 
----
+a **S**-imultaneous **L**-ocalization **A**-nd **M**-apping algorithm based on rodent **hippo**-campal navigation paradigms.
+
+* * *
+
 ## View/run the notebooks here: [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/acellon/hipposlam/master)
----
+
+* * *
 
 ### This repo includes:
 
@@ -17,14 +20,14 @@ a Simultaneous Localization And Mapping algorithm based on mammal (rodent) __hip
 | `scoring.ipynb`           | explores scoring concepts for navigational cells.                           |
 | `pc_gc_experiments.ipynb` | compares PCs from VCOs and from GCs, shows GC translation, etc.             |
 
-
 ### Still under construction:
 
 | File            | Description                                     |
 |:----------------|:------------------------------------------------|
 | `solstad.ipynb` | demonstrates [Solstad _et al._, 2006][solstad]. |
 
-
 [welday]: http://www.jneurosci.org/content/31/45/16157.long
+
 [de almeida]: http://www.jneurosci.org/content/29/23/7504.long
+
 [solstad]: https://www.ncbi.nlm.nih.gov/pubmed/17094145
