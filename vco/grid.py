@@ -26,7 +26,7 @@ class Neuron:
         rs = 'Neuron [{}cell, input type = {}, number of inputs ={}]'
         return rs.format(self.cell_type, type(self.inputs[0]), len(self.weights))
 
-    def show_plot(self, size):
+    def show_plot(self, size, fignum):
         if self.hierarchy == 1:
             out_norm, out_env = vco.matrix_sum(self.mat, self.weights, size)
             fig, axs = plt.subplots(1, 2, sharex=True, sharey=True, figsize=(8, 4))
@@ -35,6 +35,8 @@ class Neuron:
             axs[1].imshow(out_norm, aspect='auto', cmap='jet', extent=(-size, size, -size, size))
             axs[1].set_title(self.cell_type + ': Normalized Envelope')
             plt.tight_layout()
+            # plt.show()
+            plt.savefig("Figure_" + str(fignum), bbox_inches = 'tight')
 
     def add_weight(self, weight):
         self.weights = [self.weights, weight]

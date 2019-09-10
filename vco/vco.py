@@ -260,7 +260,7 @@ def matrix_sum(matrix, weights, size):
     for weight in weights:
         x, y, z, w = weight
         cell_env = matrix[x][y].get_envelope(int(z), xx, yy)
-        env_sum = env_sum + cell_env
+        env_sum = env_sum + w * cell_env
     env_sum = np.abs(env_sum)
     max_env = np.max(env_sum)
     thresh_env = env_sum - 0.65*max_env
